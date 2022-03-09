@@ -56,8 +56,6 @@ body {
     display: flex;
 }
 
-
-
 .header-logo {
     height: 100%;
     width: auto;
@@ -98,16 +96,12 @@ body {
 
 .header-links a {
     display: inline;
-    padding-right: 5px;
-    margin: 0;
-    border-right: 2px solid #a4a4a4;
     color: #a4a4a4;
 }
 
-.header-links a:last-child {
-    border-right: 0px;
-    margin-left: 3px;
-    padding: 0;
+.header-links a:not(:last-child) {
+    border-right: 2px solid #a4a4a4;
+    padding-right: 5px;
 }
 
 
@@ -398,4 +392,119 @@ body {
     letter-spacing: 1px;
     line-height: 25px;
     margin-top: 25px;
+}
+
+
+
+
+/* Our team */
+
+.our-team {
+    height: 650px;
+    background: url("content/our-team-bg.jpg") no-repeat center;
+    text-align: center;
+}
+
+.our-team-title {
+    padding-top: 65px;
+}
+
+.our-team-title-text {
+    text-transform: uppercase;
+    font-family: 'Amsdam Regular';
+    font-style: 20px;
+    color: #3e3d3d;
+}
+
+.our-team-line {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.our-team-desc {
+    color: #3e3d3d;
+    font-size: 14px;
+    font-family: 'CrimsonText-Roman';
+    width: 1030px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+}
+
+.our-team-employees {
+    list-style: none;
+    text-align: center;
+}
+
+.our-team-employees li {
+    width: 270px;
+    height: 340px;
+    background: red;
+
+    display: inline-block;
+    position: relative;
+
+    margin-right: 30px;
+}
+
+.our-team-employee-info {
+    position: absolute;
+    width: 250px;
+    height: 320px;
+    background: white;
+    top: 10px;
+    left: 10px;
+
+    opacity: 0%;
+
+    text-align: left;
+
+    transition: opacity .5s;
+}
+
+.our-team-employee-info:hover {
+    opacity: 80%;
+}
+
+.our-team-employee-info * {
+    margin-left: 15px;
+}
+
+.our-team-employee-info > .employee-name {
+    color: #3e3d3d;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+
+    margin-top: 200px;
+}
+
+.our-team-employee-info > .employee-post {
+    color: #3e3d3d;
+    font-family: 'CrimsonText-Roman';
+    font-style: italic;
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+.our-team-employee-info > .employee-links {
+    text-align: left;
+}
+
+.our-team-employee-info > .employee-links > a {
+    margin: 0;
+    color: #3e3d3d;
+}
+
+.our-team-employee-info > .employee-links > a:not(:last-child) {
+    /* margin-right: 5px; */
+    padding-right: 5px;
+    border-right: 2px solid #aaaaaa;
+}
+
+.our-team-employee-info > .line {
+    width: 140px;
+    border-bottom: 2px solid #515151;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
