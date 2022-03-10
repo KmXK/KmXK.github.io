@@ -556,7 +556,10 @@ body {
 
 .start-mark {
     font-size: 35px;
-    color: inherit;
+    width: 50px !important;
+    height: 50px !important;
+    margin-top: 35px;
+    left: calc(50% - 25px) !important;
 }
 
 .history-event {
