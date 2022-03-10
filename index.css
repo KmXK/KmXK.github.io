@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Amsdam Regular';
-    src: url('content/fonts/Amsdam\ Regular.ttf') format('truetype');
+    src: url('content/fonts/Amsdam/Amsdam\ Regular.ttf') format('truetype');
 } 
 
 
@@ -142,6 +142,7 @@ body {
     font-size: 14px;
     color: #fff;
     margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
 .home-title {
@@ -202,7 +203,8 @@ body {
 
 .about-title {
     margin-top: 50px;
-    font-family: 'Amsdam Regular';
+    font-family: 'Amsdam Regular';    
+    font-weight: 500;
     font-size: 20px;
     text-transform: uppercase;
     color: #3e3d3d;
@@ -307,6 +309,7 @@ body {
 
 .services-title-text {
     font-family: 'Amsdam Regular';
+    font-weight: 500;
     font-size: 20px;
     color: #fff;
     text-transform: uppercase;
@@ -397,6 +400,42 @@ body {
 
 
 
+
+/* History */
+
+.history {
+    height: 1500px;
+    background: #ededed;
+    text-align: center;
+}
+
+.history-title {
+    padding-top: 65px;
+}
+
+.history-title-text {
+    text-transform: uppercase;
+    font-family: 'Amsdam Regular';
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #3e3d3d;
+}
+
+.history-line {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.history-desc {
+    font-size: 14px;
+    font-family: 'CrimsonText-Roman';
+    margin: 0 auto;
+    width: 1000px;
+    letter-spacing: 1px;
+}
+
+
 /* Our team */
 
 .our-team {
@@ -412,7 +451,8 @@ body {
 .our-team-title-text {
     text-transform: uppercase;
     font-family: 'Amsdam Regular';
-    font-style: 20px;
+    font-weight: 500;
+    font-size: 20px;
     color: #3e3d3d;
 }
 
