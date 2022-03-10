@@ -86,22 +86,63 @@ body {
     margin-right: 16px;
     text-transform: uppercase;
     color: #808080;
+
+    transition: color .1s;
+
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #515151;
+
+    transition: color .3s;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    /* transform: translateX(50%); */
+
+    width: 0%;
+    top: 100%;
+    left: 50%;
+    text-align: center;
+    height: 3px;
+    background: #515151;
+
+    transition: width .5s, left .5s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    /* transform: translateX(0%); */
+    left: 0%;
 }
 
 .header-links {
     display: inline;
     float: right;
     margin-top: 23px;
+    line-height: 10px;
 }
 
 .header-links a {
     display: inline;
     color: #a4a4a4;
+    
+    transition: color .3s;
 }
 
-.header-links a:not(:last-child) {
+.header-links a:hover {
+    color: #515151;
+}
+
+.header-links a:not(:last-child) + span {
+    display: inline-block;
     border-right: 2px solid #a4a4a4;
-    padding-right: 5px;
+    padding-right: 2px;
+    margin-right: 2px;
+    height: 12px;
 }
 
 
@@ -119,7 +160,13 @@ body {
     margin-top: 270px;
     width: 34px;
     height: 34px;
-    background: url("content/arrow_nav.png") 0 0 repeat;
+    background: url("content/arrow_nav.png") 0 0 no-repeat;
+
+    transition: filter .3s;
+}
+
+.home-nav-btn:hover {
+    filter: brightness(0.8);
 }
 
 .home-prev-nav-btn {
@@ -158,6 +205,12 @@ body {
     color: #fff;
     margin: 0 auto;
     position: relative;
+
+    transition: background .3s;
+}
+
+.home-start-btn:hover {
+    background: rgb(255, 255, 255, 0.3);
 }
 
 .home-start-btn::after {
@@ -175,6 +228,12 @@ body {
     background-image: url("content/arrow_start.png");
     
     pointer-events: none;
+
+    transition: top .3s;
+}
+
+.home-start-btn:hover::after {
+    top: 50px;
 }
 
 
@@ -238,6 +297,8 @@ body {
     width: 135px;
     color: #3e3d3d;
     letter-spacing: 0;
+
+    transition: color .3s, background .3s;
 }
 
 .about-btn:hover {
@@ -510,7 +571,7 @@ body {
     margin-left: 15px;
 }
 
-.our-team-employee-info > .employee-name {
+.employee-name {
     color: #3e3d3d;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
@@ -518,7 +579,7 @@ body {
     margin-top: 200px;
 }
 
-.our-team-employee-info > .employee-post {
+.employee-post {
     color: #3e3d3d;
     font-family: 'CrimsonText-Roman';
     font-style: italic;
@@ -527,20 +588,28 @@ body {
     margin-top: 5px;
 }
 
-.our-team-employee-info > .employee-links {
+.employee-links {
     text-align: left;
 }
 
-.our-team-employee-info > .employee-links > a {
+.employee-links > a {
     margin: 0;
     color: #3e3d3d;
+
+    transition: color .3s;
 }
 
-.our-team-employee-info > .employee-links > a:not(:last-child) {
-    /* margin-right: 5px; */
-    padding-right: 5px;
-    border-right: 2px solid #aaaaaa;
+.employee-links > a:hover {
+    color: #1f1f1f;
 }
+
+.employee-links a:not(:last-child) + span {
+    display: inline-block;
+    border-right: 2px solid #aaaaaa;
+    margin: 0;
+    height: 12px;
+}
+
 
 .our-team-employee-info > .line {
     width: 140px;
