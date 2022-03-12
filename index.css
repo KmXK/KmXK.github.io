@@ -818,6 +818,274 @@ body {
 }
 
 
+
+
+
+/*Blog*/
+
+.blog {
+    background-color: #e3e3e3;
+    text-align: center;
+ }
+ 
+ .blog__title {
+    padding-top: 80px;
+ }
+ 
+ .blog__title__text {
+    font-family: "Amsdam Regular";
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    color: #3e3d3d;
+ }
+ 
+ .blog__line {
+    margin-top: 20px;
+    margin-bottom: 35px;
+ }
+ 
+ .blog__desc {
+    color: #3e3d3d;
+    font-size: 14px;
+    font-family: "CrimsonText-Roman";
+    width: 1030px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    margin-bottom: 80px;
+ }
+ 
+ .blog__table {
+    border-spacing: 0px;
+ }
+ 
+ .blog__table td {
+    padding: 0px;
+ }
+
+ .blog__table td > * {
+    width: 400px;
+    height: 410px;
+ }
+
+ .blog__image {
+    display: block;
+    transition: opacity 0.2s linear;
+ }
+ 
+ /* Dark and Grey */
+ 
+ .semi-dark {
+    background-color: #2d2d2f;
+ }
+ 
+ .grey {
+    background-color: #424244;
+ }
+ 
+ .semi-grey {
+    background-color: #555557;
+ }
+ 
+ .dark {
+    background-color: #232325;
+ }
+ 
+ /*Image*/
+ 
+ .blog__image-desc {
+    width: 315px;
+    max-width: 100%;
+    text-align: left;
+ }
+
+ .image-desc {
+     padding: 0 50px 0 35px;
+ }
+
+ .image-desc__suptitle {
+    padding-top: 50px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #e3e3e3;
+    font-family: "Crimson Text";
+    font-style: italic;
+ }
+ 
+ .image-desc__suptitle__grey {
+    padding-top: 50px;
+    font-size: 12px;
+    color: #e3e3e3;
+    font-family: "Crimson Text";
+    font-style: italic;
+ }
+ 
+ .image-desc__suptitle__grey::after {
+    content: "";
+    display: block;
+    width: 151px;
+    height: 1px;
+    background-color: #565656;
+    margin-top: 12px;
+    margin-bottom: 20px;
+ }
+ 
+ .image-desc__suptitle::after {
+    content: "";
+    display: block;
+    width: 151px;
+    height: 1px;
+    background-color: #454545;
+    margin-top: 12px;
+    margin-bottom: 20px;
+ }
+ 
+ .image-desc__arrow {
+     display: inline-block;
+ }
+ .image-desc__title {
+    font-family: "Montserrat";
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+ 
+    text-transform: uppercase;
+    padding-bottom: 35px;
+    color: #e3e3e3;
+  }
+ 
+ .image-desc__text {
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #949494;
+    font-family: "CrimsonText-Roman";
+ }
+ 
+ /*Clients*/
+ 
+ .clients {
+    background-color: #ffffff;
+    text-align: center;
+ }
+ 
+ .clients__header {
+    margin-left: 285px;
+    width: 1030px;
+    height: 524px;
+ }
+
+ .clients__title {
+    padding-top: 80px;
+ }
+ 
+ .clients__title__text {
+    font-family: "Amsdam Regular";
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    color: #3e3d3d;
+ }
+ 
+ .clients__line {
+    margin-top: 20px;
+    margin-bottom: 35px;
+ } 
+
+ .clients__desc {
+    color: #3e3d3d;
+    font-size: 14px;
+    font-family: "CrimsonText-Roman";
+    width: 1030px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    margin-bottom: 80px;
+ }
+ 
+ .clients__logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .clients_logo {
+     width: 135px;
+     height: 135px;
+ }
+ 
+ .clients__below {
+    width: 1600px;
+    height: 524px;
+    background: url("content/clients-background.jpg") no-repeat center;
+ }
+ 
+ .clients__below__image {
+    padding-top: 75px;
+    background-color: transparent;
+ 
+    padding-bottom: 35px;
+ }
+ 
+ .clients__below__suptitle {
+    font-family: "Crimson Text";
+    font-style: italic;
+    font-size: 20px;
+    color: #efefef;
+    padding-left: 415px;
+    padding-right: 415px;
+ }
+ 
+ .client-text {
+    position: relative;
+ }
+ 
+ .client-text::before {
+    font-family: "Crimson Text";
+    font-style: italic;
+    content: " \201c ";
+    font-size: 93.44px;
+    position: absolute;
+    bottom: -35px;
+    left: -55px;
+ }
+ 
+ .client-text::after {
+    position: absolute;
+    font-family: "Crimson Text";
+    font-style: italic;
+    content: " \201d ";
+    font-size: 93.5px;
+    line-height: 112px;
+    font-weight: 200;
+    top: 15px;
+    right: 80px;
+ }
+ 
+ .clients__below__author {
+    padding-top: 45px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: "Montserrat";
+    font-size: 13px;
+    color: #e3e3e3;
+ }
+ 
+ .clients__below__text {
+    padding-top: 15px;
+    font-family: "crimsontext";
+    font-style: italic;
+    font-size: 14px;
+    color: #efefef;
+    padding-bottom: 45px;
+    line-height: 24px;
+    font-weight: 400;
+ }
+
+
 /* Map */
 
 .map {
@@ -832,7 +1100,7 @@ body {
 
 
 
-/* Contact */
+/* Footer */
 
 .footer{
     height: 640px;
