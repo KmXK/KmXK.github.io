@@ -44,7 +44,7 @@ body {
     letter-spacing: 2px;
     padding: 10px 5px 10px 5px;
     border: 2px solid #3e3d3d;
-    display: block;
+    display: inline-block;
     width: 150px;
     cursor: pointer;
 
@@ -215,6 +215,7 @@ body {
 
 .home-start-btn {
     color: #fff;
+    display: block;
     margin: 0 auto;
     border: 2px solid #f2f2f2;
     position: relative;
@@ -816,6 +817,277 @@ body {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+
+
+
+/* Portfolio */
+
+
+.portfolio {
+    background: #fff;
+}
+
+.container-portfolio {
+    padding-top: 65px;
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio-logo {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Amsdam Regular";
+    color: #3e3d3d;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+.divider-portfolio {
+    width: 186px;
+    height: 5px;
+    margin-top: 30px;
+}
+
+.text-portfolio {
+    margin-top: 35px;
+    font-family: "CrimsonText-Roman";
+    font-size: 14px;
+    font-weight: 400;
+    left: 0.1em;
+    color: #3e3d3d;
+}
+
+.portfolio-buttons {
+    margin-top: 55px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.btn-partfolio {
+    height: 30px;
+    width: auto;
+    padding: 0 20px;
+    font-size: 11px;
+    background: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gallery {
+     background-color: #3e3d3d;
+}
+
+.gallery-flex {
+    display: flexbox;
+}
+
+.block-row-1 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.block-row-2 {
+    display: flex;
+    align-items:flex-end;
+    margin-top: -216px;
+}
+
+.gallery_item {
+    width: 400px; 
+}
+
+
+
+/* Prices */
+
+.prices{
+    width: 100%;
+    background-color: #e3e3e3;
+    text-align: center;
+    padding-top: 65px;
+}
+
+.logo-prices{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    font-family: "Amsdam Regular";
+    color: #3e3d3d;
+}
+.divider-prices{
+    width: 186px;
+    height: 5px;
+    margin-top: 25px;
+}
+.text-prices{
+    margin-top: 35px;
+    font-family: "CrimsonText-Roman";
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+.subscriptions{
+    width: 1170px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+}
+.subscriptions-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 370px;
+    background-color: #fff;
+    align-items: center;
+}
+
+.subscription-logo{
+    font-family: "Monsterrat";
+    margin-top: 45px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color:#3e3d3d;
+    letter-spacing: 0.1em;
+}
+
+.subscription-icon {
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 50px;
+    height: 50px;
+    border:2px solid #3e3d3d;
+    border-radius: 100%;
+
+    position: relative;
+}
+
+.subscription-icon::after,
+.subscription-icon::before {
+    position: absolute;
+    content: "";
+
+    width: 85px;
+    top: 25px;
+    border-top: 1px solid #504f4f;
+}
+
+.subscription-icon::after {
+    left: 50px;
+}
+
+.subscription-icon::before {
+    right: 50px;
+}
+
+.subscription-icon > i {
+    line-height: 50px;
+    font-size: 25px;
+}
+
+.subscription-price {
+    margin-top: 10px;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 700;
+    color: #3e3d3d;
+
+    position: relative;
+}
+
+.subscription-price::before {
+    content: "$";
+    position: absolute;
+    left: -20px;
+
+    font-size: 28.5px;
+}
+
+.subscription-text {
+    font-family: "CrimsonText-Roman";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    color: #3e3d3d;
+    margin-top: 30px;
+
+    line-height: 30px;
+}
+
+.subscription-btn { 
+    margin-top:45px;
+    background: #fff;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    width: auto;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.end-prices{
+    margin-top: 90px;
+    display:flex;
+    height: 180px;
+    background-color: #3e3d3d;
+}
+.icon-quality{
+    margin-left: 230px;
+    margin-top: 35px;
+    height: 105px;
+    width: 110px;
+}
+.text-quality{
+    display: flex;
+    flex-direction: column;
+    margin-left: 45px;
+    margin-top: 55px;
+    text-align: left;
+}
+.text-quality-title{
+    font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #d8d8d8;
+}
+.text-quality-desc{
+    font-family: "Crimson Text Roman";
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0;
+    color: #888888;
+    margin-top: 25px;
+}
+.btn-purchase{
+    background-color: #3e3d3d;
+    color: #e3e3e3;
+    border: 2px solid #e3e3e3;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 50px;
+    margin-top: 80px;
+}
+.btn-purchase:hover{
+    display:inline-block;
+    background-color: #e3e3e3;
+    color: #3e3d3d;
+}
+
 
 
 
