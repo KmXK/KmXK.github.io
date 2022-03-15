@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Crimson Text';
-    src: local('Crimson Text'), local('CrimsonText-Roman'), url('content/fonts/Crimson\ Text/crimsontext.woff2') format('woff2'), url('content/fonts/Crimson\ Text/crimsontext.woff') format('woff'), url('content/fonts/Crimson\ Text/crimsontext.ttf') format('truetype');
+    src: local('Crimson Text'), url('content/fonts/Crimson Text/crimsontext.woff2') format('woff2'), url('content/fonts/Crimson Text/crimsontext.woff') format('woff'), url('content/fonts/Crimson Text/crimsontext.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Amsdam Regular';
-    src: url('content/fonts/Amsdam/Amsdam\ Regular.ttf') format('truetype');
-} 
+    src: url('content/fonts/Amsdam/Amsdam Regular.ttf') format('truetype');
+}
 
 
 * {
@@ -62,7 +62,7 @@ body {
 
 /* Header */
 
-.header{
+.header {
     width: 100%;
     height: 60px;
     background: #fff;
@@ -76,7 +76,7 @@ body {
 
 .header-logo-img {
     margin-top: 15px;
-    float:left;
+    float: left;
 }
 
 .header-logo-text {
@@ -114,7 +114,7 @@ body {
     position: absolute;
     /* transform: translateX(50%); */
 
-    width: 0%;
+    width: 0;
     top: 100%;
     left: 50%;
     text-align: center;
@@ -127,7 +127,7 @@ body {
 .nav-link:hover::after {
     width: 100%;
     /* transform: translateX(0%); */
-    left: 0%;
+    left: 0;
 }
 
 .header-links {
@@ -140,7 +140,7 @@ body {
 .header-links a {
     display: inline;
     color: #a4a4a4;
-    
+
     transition: color .3s;
 }
 
@@ -155,8 +155,6 @@ body {
     margin-right: 2px;
     height: 12px;
 }
-
-
 
 
 /* Home */
@@ -196,7 +194,7 @@ body {
 }
 
 .home-desc-text {
-    font-family: 'Crimson Text';
+    font-family: 'Crimson Text', monospace;
     font-size: 14px;
     color: #fff;
     margin-bottom: 20px;
@@ -204,7 +202,7 @@ body {
 }
 
 .home-title {
-    font-family: "Amsdam Regular";
+    font-family: "Amsdam Regular", sans-serif;
     font-weight: 300;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -240,7 +238,7 @@ body {
     left: 0;
     margin: 0 auto;
     background-image: url("content/arrow_start.png");
-    
+
     pointer-events: none;
 
     transition: top .3s;
@@ -249,7 +247,6 @@ body {
 .home-start-btn:hover::after {
     top: 50px;
 }
-
 
 
 /* About */
@@ -276,7 +273,7 @@ body {
 
 .about-title {
     margin-top: 50px;
-    font-family: 'Amsdam Regular';    
+    font-family: 'Amsdam Regular', sans-serif;
     font-weight: 500;
     font-size: 20px;
     text-transform: uppercase;
@@ -288,15 +285,14 @@ body {
 }
 
 .about-text {
-    font-family: 'Crimson Text';
+    font-family: 'Crimson Text', sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: #3e3d3d;
     line-height: 25px;
-    margin: 0 70px;
-    margin-top: 20px;
+    margin: 20px 70px 0 70px;
     text-align: left;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
 }
 
 .about-btns {
@@ -311,7 +307,6 @@ body {
     color: #3e3d3d;
     letter-spacing: 0;
 }
-
 
 
 .about-stats {
@@ -362,8 +357,6 @@ body {
 }
 
 
-
-
 /* Services */
 
 .services {
@@ -377,7 +370,7 @@ body {
 }
 
 .services-title-text {
-    font-family: 'Amsdam Regular';
+    font-family: 'Amsdam Regular', sans-serif;
     font-weight: 500;
     font-size: 20px;
     color: #fff;
@@ -392,11 +385,10 @@ body {
 .services-desc {
     color: #cfcfcf;
     font-size: 14px;
-    font-family: 'CrimsonText-Roman';
+    font-family: 'Crimson Text', sans-serif;
     width: 1030px;
-    margin: 0 auto;
     letter-spacing: 1px;
-    margin-top: 35px;
+    margin: 35px auto 0;
 }
 
 .services-list {
@@ -458,16 +450,12 @@ body {
 .services-list-item-text {
     color: #d8d8d8;
     font-size: 14px;
-    font-family: 'CrimsonText-Roman';
+    font-family: 'Crimson Text', sans-serif;
     width: 200px;
-    margin: 0 auto;
     letter-spacing: 1px;
     line-height: 25px;
-    margin-top: 25px;
+    margin: 25px auto 0;
 }
-
-
-
 
 
 /* History */
@@ -484,7 +472,7 @@ body {
 
 .history-title-text {
     text-transform: uppercase;
-    font-family: 'Amsdam Regular';
+    font-family: 'Amsdam Regular', sans-serif;
     letter-spacing: 2px;
     font-weight: 500;
     font-size: 20px;
@@ -498,14 +486,11 @@ body {
 
 .history-desc {
     font-size: 14px;
-    font-family: 'CrimsonText-Roman';
+    font-family: 'Crimson Text', sans-serif;
     margin: 0 auto;
     width: 1000px;
     letter-spacing: 1px;
 }
-
-
-
 
 
 /* Scheme */
@@ -641,59 +626,58 @@ body {
 }
 
 .history-event > .text {
-    font-family: 'CrimsonText-Roman';
+    font-family: 'Crimson Text', sans-serif;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 1.4px;
+    letter-spacing: 1px;
 }
 
 /* Event arrow */
 
 .history-event::before,
 .history-event::after {
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 0;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
 }
 
 .history-event.right::before {
-	top: 18px;
-	left: -12px;
-	border: 6px solid;
-	border-color:  #3e3d3d #3e3d3d transparent transparent;
+    top: 18px;
+    left: -12px;
+    border: 6px solid;
+    border-color: #3e3d3d #3e3d3d transparent transparent;
 }
 
 .history-event.right::after {
-	top: 20px;
-	left: -7px;
-	border: 6px solid;
-	border-color: #ededed #ededed transparent transparent;
+    top: 20px;
+    left: -7px;
+    border: 6px solid;
+    border-color: #ededed #ededed transparent transparent;
 }
 
 .history-dark.history-event.right::after {
-	border-color: #3e3d3d #3e3d3d transparent transparent;
+    border-color: #3e3d3d #3e3d3d transparent transparent;
 }
 
 .history-event.left::before {
-	top: 18px;
-	left: calc(100%);
-	border: 6px solid;
-	border-color:  #3e3d3d transparent transparent #3e3d3d;
+    top: 18px;
+    left: calc(100%);
+    border: 6px solid;
+    border-color: #3e3d3d transparent transparent #3e3d3d;
 }
 
 .history-event.left::after {
-	top: 20px;
-	left: calc(100% - 5px);
-	border: 6px solid;
-	border-color: #ededed transparent transparent #ededed;
+    top: 20px;
+    left: calc(100% - 5px);
+    border: 6px solid;
+    border-color: #ededed transparent transparent #ededed;
 }
 
 .history-dark {
     background-color: #3e3d3d !important;
     color: #ededed !important;
 }
-
 
 
 /* Our team */
@@ -710,7 +694,7 @@ body {
 
 .our-team-title-text {
     text-transform: uppercase;
-    font-family: 'Amsdam Regular';
+    font-family: 'Amsdam Regular', sans-serif;
     font-weight: 500;
     font-size: 20px;
     color: #3e3d3d;
@@ -724,11 +708,10 @@ body {
 .our-team-desc {
     color: #3e3d3d;
     font-size: 14px;
-    font-family: 'CrimsonText-Roman';
+    font-family: 'Crimson Text', sans-serif;
     width: 1030px;
-    margin: 0 auto;
     letter-spacing: 1px;
-    margin-bottom: 60px;
+    margin: 0 auto 60px;
 }
 
 .our-team-employees {
@@ -755,7 +738,7 @@ body {
     top: 10px;
     left: 10px;
 
-    opacity: 0%;
+    opacity: 0;
 
     text-align: left;
 
@@ -780,7 +763,7 @@ body {
 
 .employee-post {
     color: #3e3d3d;
-    font-family: 'CrimsonText-Roman';
+    font-family: 'Crimson Text', sans-serif;
     font-style: italic;
     font-size: 13px;
 
@@ -818,8 +801,6 @@ body {
 }
 
 
-
-
 /* Portfolio */
 
 
@@ -837,7 +818,7 @@ body {
 .portfolio-logo {
     text-transform: uppercase;
     font-size: 20px;
-    font-family: "Amsdam Regular";
+    font-family: "Amsdam Regular", sans-serif;
     color: #3e3d3d;
     font-weight: 400;
     letter-spacing: 0.1em;
@@ -851,7 +832,7 @@ body {
 
 .text-portfolio {
     margin-top: 35px;
-    font-family: "CrimsonText-Roman";
+    font-family: "Crimson Text", sans-serif;
     font-size: 14px;
     font-weight: 400;
     left: 0.1em;
@@ -865,7 +846,7 @@ body {
     margin-bottom: 60px;
 }
 
-.btn-partfolio {
+.btn-portfolio {
     height: 30px;
     width: auto;
     padding: 0 20px;
@@ -876,11 +857,11 @@ body {
 }
 
 .gallery {
-     background-color: #3e3d3d;
+    background-color: #3e3d3d;
 }
 
 .gallery-flex {
-    display: flexbox;
+    /*display: flex;*/
 }
 
 .block-row-1 {
@@ -890,52 +871,54 @@ body {
 
 .block-row-2 {
     display: flex;
-    align-items:flex-end;
+    align-items: flex-end;
     margin-top: -216px;
 }
 
 .gallery_item {
-    width: 400px; 
+    width: 400px;
 }
-
 
 
 /* Prices */
 
-.prices{
+.prices {
     width: 100%;
     background-color: #e3e3e3;
     text-align: center;
     padding-top: 65px;
 }
 
-.logo-prices{
+.logo-prices {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 0.1em;
-    font-family: "Amsdam Regular";
+    font-family: "Amsdam Regular", sans-serif;
     color: #3e3d3d;
 }
-.divider-prices{
+
+.divider-prices {
     width: 186px;
     height: 5px;
     margin-top: 25px;
 }
-.text-prices{
+
+.text-prices {
     margin-top: 35px;
-    font-family: "CrimsonText-Roman";
+    font-family: "Crimson Text", sans-serif;
     font-size: 14px;
     letter-spacing: 0.1em;
 }
-.subscriptions{
+
+.subscriptions {
     width: 1170px;
     height: 550px;
-    margin: 0 auto;
-    margin-top: 80px;
+    margin: 80px auto 0;
     text-align: center;
 }
-.subscriptions-flex{
+
+.subscriptions-flex {
     display: flex;
     justify-content: space-between;
 }
@@ -949,22 +932,21 @@ body {
     align-items: center;
 }
 
-.subscription-logo{
-    font-family: "Monsterrat";
+.subscription-logo {
+    font-family: "Monsterrat", sans-serif;
     margin-top: 45px;
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 800;
-    color:#3e3d3d;
+    color: #3e3d3d;
     letter-spacing: 0.1em;
 }
 
 .subscription-icon {
-    margin: 0 auto;
-    margin-top: 25px;
+    margin: 25px auto 0;
     width: 50px;
     height: 50px;
-    border:2px solid #3e3d3d;
+    border: 2px solid #3e3d3d;
     border-radius: 100%;
 
     position: relative;
@@ -995,7 +977,7 @@ body {
 
 .subscription-price {
     margin-top: 10px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-size: 70px;
     font-weight: 700;
@@ -1009,11 +991,11 @@ body {
     position: absolute;
     left: -20px;
 
-    font-size: 28.5px;
+    font-size: 29px;
 }
 
 .subscription-text {
-    font-family: "CrimsonText-Roman";
+    font-family: "Crimson Text", sans-serif;
     font-size: 16px;
     font-weight: 400;
     font-style: italic;
@@ -1023,8 +1005,8 @@ body {
     line-height: 30px;
 }
 
-.subscription-btn { 
-    margin-top:45px;
+.subscription-btn {
+    margin-top: 45px;
     background: #fff;
     letter-spacing: 0.1em;
     font-size: 13px;
@@ -1034,35 +1016,39 @@ body {
     padding-right: 30px;
 }
 
-.end-prices{
+.end-prices {
     margin-top: 90px;
-    display:flex;
+    display: flex;
     height: 180px;
     background-color: #3e3d3d;
 }
-.icon-quality{
+
+.icon-quality {
     margin-left: 230px;
     margin-top: 35px;
     height: 105px;
     width: 110px;
 }
-.text-quality{
+
+.text-quality {
     display: flex;
     flex-direction: column;
     margin-left: 45px;
     margin-top: 55px;
     text-align: left;
 }
-.text-quality-title{
-    font-family: "Montserrat";
+
+.text-quality-title {
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
     letter-spacing: 0.1em;
     color: #d8d8d8;
 }
-.text-quality-desc{
-    font-family: "Crimson Text Roman";
+
+.text-quality-desc {
+    font-family: "Crimson Text Roman", sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1071,7 +1057,8 @@ body {
     color: #888888;
     margin-top: 25px;
 }
-.btn-purchase{
+
+.btn-purchase {
     background-color: #3e3d3d;
     color: #e3e3e3;
     border: 2px solid #e3e3e3;
@@ -1081,15 +1068,12 @@ body {
     margin-left: 50px;
     margin-top: 80px;
 }
-.btn-purchase:hover{
-    display:inline-block;
+
+.btn-purchase:hover {
+    display: inline-block;
     background-color: #e3e3e3;
     color: #3e3d3d;
 }
-
-
-
-
 
 
 /*Blog*/
@@ -1097,102 +1081,101 @@ body {
 .blog {
     background-color: #e3e3e3;
     text-align: center;
- }
- 
- .blog__title {
+}
+
+.blog__title {
     padding-top: 80px;
- }
- 
- .blog__title__text {
-    font-family: "Amsdam Regular";
+}
+
+.blog__title__text {
+    font-family: "Amsdam Regular", sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 500;
     color: #3e3d3d;
- }
- 
- .blog__line {
+}
+
+.blog__line {
     margin-top: 20px;
     margin-bottom: 35px;
- }
- 
- .blog__desc {
+}
+
+.blog__desc {
     color: #3e3d3d;
     font-size: 14px;
-    font-family: "CrimsonText-Roman";
+    font-family: "Crimson Text", sans-serif;
     width: 1030px;
-    margin: 0 auto;
     letter-spacing: 1px;
-    margin-bottom: 80px;
- }
- 
- .blog__table {
-    border-spacing: 0px;
- }
- 
- .blog__table td {
-    padding: 0px;
- }
+    margin: 0 auto 80px;
+}
 
- .blog__table td > * {
+.blog__table {
+    border-spacing: 0;
+}
+
+.blog__table td {
+    padding: 0;
+}
+
+.blog__table td > * {
     width: 400px;
     height: 410px;
- }
+}
 
- .blog__image {
+.blog__image {
     display: block;
     transition: opacity 0.2s linear;
- }
- 
- /* Dark and Grey */
- 
- .semi-dark {
+}
+
+/* Dark and Grey */
+
+.semi-dark {
     background-color: #2d2d2f;
- }
- 
- .grey {
+}
+
+.grey {
     background-color: #424244;
- }
- 
- .semi-grey {
+}
+
+.semi-grey {
     background-color: #555557;
- }
- 
- .dark {
+}
+
+.dark {
     background-color: #232325;
- }
- 
- /*Image*/
- 
- .blog__image-desc {
+}
+
+/*Image*/
+
+.blog__image-desc {
     width: 315px;
     max-width: 100%;
     text-align: left;
- }
+}
 
- .image-desc {
-     padding: 0 50px 0 35px;
- }
+.image-desc {
+    padding: 0 50px 0 35px;
+}
 
- .image-desc__suptitle {
+.image-desc__subtitle {
     padding-top: 50px;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
     color: #e3e3e3;
-    font-family: "Crimson Text";
+    font-family: "Crimson Text", sans-serif;
     font-style: italic;
- }
- 
- .image-desc__suptitle__grey {
+}
+
+.image-desc__subtitle__grey {
     padding-top: 50px;
     font-size: 12px;
     color: #e3e3e3;
-    font-family: "Crimson Text";
+    font-family: "Crimson Text", sans-serif;
     font-style: italic;
- }
- 
- .image-desc__suptitle__grey::after {
+}
+
+.image-desc__subtitle__grey::after {
     content: "";
     display: block;
     width: 151px;
@@ -1200,9 +1183,9 @@ body {
     background-color: #565656;
     margin-top: 12px;
     margin-bottom: 20px;
- }
- 
- .image-desc__suptitle::after {
+}
+
+.image-desc__subtitle::after {
     content: "";
     display: block;
     width: 151px;
@@ -1210,151 +1193,151 @@ body {
     background-color: #454545;
     margin-top: 12px;
     margin-bottom: 20px;
- }
- 
- .image-desc__arrow {
-     display: inline-block;
- }
- .image-desc__title {
-    font-family: "Montserrat";
+}
+
+.image-desc__arrow {
+    display: inline-block;
+}
+
+.image-desc__title {
+    font-family: "Montserrat", sans-serif;
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
- 
+
     text-transform: uppercase;
     padding-bottom: 35px;
     color: #e3e3e3;
-  }
- 
- .image-desc__text {
+}
+
+.image-desc__text {
     line-height: 20px;
     font-weight: 400;
     letter-spacing: 1px;
     font-size: 14px;
     color: #949494;
-    font-family: "CrimsonText-Roman";
- }
- 
- /*Clients*/
- 
- .clients {
+    font-family: "Crimson Text", sans-serif;
+}
+
+/*Clients*/
+
+.clients {
     background-color: #ffffff;
     text-align: center;
- }
- 
- .clients__header {
+}
+
+.clients__header {
     margin-left: 285px;
     width: 1030px;
     height: 524px;
- }
+}
 
- .clients__title {
+.clients__title {
     padding-top: 80px;
- }
- 
- .clients__title__text {
-    font-family: "Amsdam Regular";
+}
+
+.clients__title__text {
+    font-family: "Amsdam Regular", sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 500;
     color: #3e3d3d;
- }
- 
- .clients__line {
+}
+
+.clients__line {
     margin-top: 20px;
     margin-bottom: 35px;
- } 
+}
 
- .clients__desc {
+.clients__desc {
     color: #3e3d3d;
     font-size: 14px;
-    font-family: "CrimsonText-Roman";
+    font-family: "Crimson Text", sans-serif;
     width: 1030px;
-    margin: 0 auto;
     letter-spacing: 1px;
-    margin-bottom: 80px;
- }
- 
- .clients__logos {
+    margin: 0 auto 80px;
+}
+
+.clients__logos {
     display: flex;
     justify-content: space-between;
     align-items: center;
- }
+}
 
- .clients_logo {
-     width: 135px;
-     height: 135px;
- }
- 
- .clients__below {
+.clients_logo {
+    width: 135px;
+    height: 135px;
+}
+
+.clients__below {
     width: 1600px;
     height: 524px;
     background: url("content/clients-background.jpg") no-repeat center;
- }
- 
- .clients__below__image {
+}
+
+.clients__below__image {
     padding-top: 75px;
     background-color: transparent;
- 
+
     padding-bottom: 35px;
- }
- 
- .clients__below__suptitle {
-    font-family: "Crimson Text";
+}
+
+.clients__below__subtitle {
+    font-family: "Crimson Text", sans-serif;
     font-style: italic;
     font-size: 20px;
     color: #efefef;
     padding-left: 415px;
     padding-right: 415px;
- }
- 
- .client-text {
+}
+
+.client-text {
     position: relative;
- }
- 
- .client-text::before {
-    font-family: "Crimson Text";
+}
+
+.client-text::before {
+    font-family: "Crimson Text", sans-serif;
     font-style: italic;
     content: " \201c ";
-    font-size: 93.44px;
+    font-size: 93px;
     position: absolute;
     bottom: -35px;
     left: -55px;
- }
- 
- .client-text::after {
+}
+
+.client-text::after {
     position: absolute;
-    font-family: "Crimson Text";
+    font-family: "Crimson Text", sans-serif;
     font-style: italic;
     content: " \201d ";
-    font-size: 93.5px;
+    font-size: 94px;
     line-height: 112px;
     font-weight: 200;
     top: 15px;
     right: 80px;
- }
- 
- .clients__below__author {
+}
+
+.clients__below__author {
     padding-top: 45px;
     line-height: 18px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-size: 13px;
     color: #e3e3e3;
- }
- 
- .clients__below__text {
+}
+
+.clients__below__text {
     padding-top: 15px;
-    font-family: "crimsontext";
+    font-family: "Crimson Text", sans-serif;
     font-style: italic;
     font-size: 14px;
     color: #efefef;
     padding-bottom: 45px;
     line-height: 24px;
     font-weight: 400;
- }
+}
 
 
 /* Map */
@@ -1369,11 +1352,9 @@ body {
 }
 
 
-
-
 /* Footer */
 
-.footer{
+.footer {
     height: 640px;
     background: url('content/contact-background.png') no-repeat center;
 
@@ -1406,41 +1387,41 @@ body {
 
 .contact-info {
     display: inline-block;
-    flex: left;
+    float: left;
     text-align: left;
 }
 
 .contact-desc {
-  font-size: 14px;
-  font-family: 'CrimsonText-Roman';
-  color: rgb(148, 148, 148);
-  line-height: 20px;
-  width: 355px;
-  letter-spacing: 1px;
+    font-size: 14px;
+    font-family: 'Crimson Text', sans-serif;
+    color: rgb(148, 148, 148);
+    line-height: 20px;
+    width: 355px;
+    letter-spacing: 1px;
 }
 
 .contact-initial {
-  margin-top: 40px;
-  font-size: 14px;
-  font-family: 'Montserrat';
-  color: rgb(227, 227, 227);
-  text-transform: uppercase;
+    margin-top: 40px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(227, 227, 227);
+    text-transform: uppercase;
 }
 
 .contact-address {
-  margin-top: 25px;
-  font-size: 14px;
-  font-family: 'CrimsonText';
-  color: rgb(148, 148, 148);
+    margin-top: 25px;
+    font-size: 14px;
+    font-family: 'Crimson Text', sans-serif;
+    color: rgb(148, 148, 148);
 }
 
 .contact-contact {
-  margin-top: 35px;
-  font-size: 14px;
-  font-family: 'Montserrat';
-  color: rgb(227, 227, 227);
-  text-transform: uppercase;
-} 
+    margin-top: 35px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(227, 227, 227);
+    text-transform: uppercase;
+}
 
 .contact-links {
     margin-top: 35px;
@@ -1449,7 +1430,7 @@ body {
 .contact-links a {
     color: #a4a4a4;
     font-size: 14px;
-    
+
     transition: color .3s;
 }
 
@@ -1465,7 +1446,7 @@ body {
 
 .contact-form {
     display: inline-block;
-    flex: left;
+    float: left;
     margin-left: 35px;
     width: 100%;
 }
@@ -1484,7 +1465,7 @@ body {
     box-sizing: border-box;
     padding: 20px 20px;
     color: #949494;
-    font-family: 'CrimsonText-Roman';
+    font-family: 'Crimson Text', sans-serif;
     font-size: 14px;
     font-style: italic;
     outline: none;
@@ -1532,7 +1513,7 @@ body {
 
 .footer-text {
     line-height: 90px;
-    font-family: 'CrimsonText-Roman';
+    font-family: 'Crimson Text', sans-serif;
     font-size: 14px;
     font-style: italic;
     color: #949494;
