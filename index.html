@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Montserrat:wght@600&display=swap"
           rel="stylesheet">
     <script src="https://use.fontawesome.com/0a9bed3c30.js"></script>
+
+    <script src="index.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -722,16 +724,25 @@
 
                 </div>
 
-                <form action="" class="contact-form">
+                <form id="form" action="" class="contact-form" >
                     <div class="contact-form-grid">
-                        <input placeholder="Name*" type="text" class="contact-form-field contact-name" required>
-                        <input placeholder="Email*" type="email" class="contact-form-field contact-email" required>
-                        <input placeholder="Telephone*" type="tel" class="contact-form-field contact-phone" required>
-                        <input placeholder="Website" type="text" class="contact-form-field contact-website">
-                        <textarea placeholder="Message" class="contact-form-field contact-message"></textarea>
+                        <input id="Name" placeholder="Name*" type="text" class="contact-form-field contact-name" required>
+                        <input id="Email" placeholder="Email*" type="email" class="contact-form-field contact-email" required>
+                        <input id="Tel" placeholder="Telephone*" type="tel" class="contact-form-field contact-phone" required>
+                        <input placeholder="Website" type="url" class="contact-form-field contact-website">
+                        <textarea placeholder="Message" type="text" class="contact-form-field contact-message"></textarea>
                     </div>
-                    <button type="submit" class="contact-submit">Submit</button>
+
+                    <button id="buttonSubmit" type="submit" class="contact-submit">Submit</button>
+
+                    <script>
+                        form.onsubmit = function() {
+                            form.contentWindow.postMessage(this.message.value, '*');
+                            return false;
+                        };
+                    </script>
                 </form>
+
             </div>
 
             <div class="footer-line"></div>
