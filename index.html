@@ -733,13 +733,7 @@
                     </div>
 
                     <button id="buttonSubmit" type="submit" class="contact-submit">Submit</button>
-
-                    <script>
-                        form.onsubmit = function() {
-                            form.contentWindow.postMessage(this.message.value, '*');
-                            return false;
-                        };
-                    </script>
+                    <form onsubmit="Subm()"/>
                 </form>
 
             </div>
@@ -753,6 +747,6 @@
 </div>
 </body>
 
-<script src="script.js"></script>
+<script src="index.js"></script>
 
 </html>
