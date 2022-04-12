@@ -1,7 +1,8 @@
-let form = document.getElementById("form")
+
 
 function Subm(){
-    //form.contentWindow.postMessage(this.message.value, '*');
+    let form = document.getElementById("form")
+    form.contentWindow.postMessage(this.message.value, '*');
     alert('send');
     return false;
 }
