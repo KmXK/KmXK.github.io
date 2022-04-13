@@ -31,7 +31,6 @@ body {
     margin: 0 auto;
 }
 
-
 /* Shared */
 
 .container {
@@ -1005,6 +1004,67 @@ body {
     color: #3e3d3d;
 }
 
+.prices-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+
+    opacity: 100%;
+
+    margin: auto auto;
+
+    transition: opacity;
+}
+
+.prices-modal.disabled {
+    display: none;
+    opacity: 0;
+}
+
+.prices-modal-content {
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.prices-modal-form {
+    width: 400px;
+    background: #cccccc;
+    border-radius: 10px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.prices-modal-form-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.prices-modal-form-container > input {
+}
+
+.prices-modal-form-container > button {
+
+}
+
+.prices-modal-form-container * {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 10px;
+
+    font-family: "Crimson Text Roman", sans-serif;
+    font-size: 24px;
+
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
 
 /*Blog*/
 
