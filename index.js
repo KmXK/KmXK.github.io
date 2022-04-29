@@ -1,14 +1,19 @@
-function Subm(){
-    let form = document.getElementById("form")
-    form.contentWindow.postMessage(this.message.value, '*');
-    alert('send');
-    return false;
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("btnSubmit");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
 }
 
-let name = document.getElementById("Name");
-let email = document.getElementById("Email");
-let tel = document.getElementById("Tel");
-const buttonSubm = document.getElementById("buttonSubmit");
-if (name !== '' && email !== '' && tel !== ''){
-    buttonSubm.disabled = false;
+span.onclick = function() {
+    modal.style.display = "none";
 }
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+} 

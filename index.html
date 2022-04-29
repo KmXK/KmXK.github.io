@@ -723,7 +723,7 @@
 
                 </div>
 
-                <form id="form" action="" class="contact-form" onsubmit="Subm()">
+                <form id="form" class="contact-form">
                     <div class="contact-form-grid">
                         <input id="Name" placeholder="Name*" type="text" class="contact-form-field contact-name" required>
                         <input id="Email" placeholder="Email*" type="email" class="contact-form-field contact-email" required>
@@ -732,7 +732,16 @@
                         <input placeholder="Message" type="text" class="contact-form-field contact-message">
                     </div>
 
-                    <button id="buttonSubmit" type="submit" class="contact-submit" disabled>Submit</button>
+                    <button id="btnSubmit" type="submit" class="contact-submit">Submit</button>
+
+                    <div id="myModal" class="modal">
+
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Form send</p>
+                        </div>
+
+                    </div>
                 </form>
 
             </div>
