@@ -1,4 +1,4 @@
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("Modal");
 
 var btn = document.getElementById("btnSubmit");
 
