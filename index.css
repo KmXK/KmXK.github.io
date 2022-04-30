@@ -1012,28 +1012,48 @@ body {
     height: 100%;
     z-index: 1000;
 
+    background: rgb(0, 0, 0, 0.6);
+
     opacity: 100%;
-
     margin: auto auto;
-
-    transition: opacity;
+    transition: opacity .3s;
 }
 
 .prices-modal.disabled {
-    display: none;
+    z-index: -100000;
+    transition: opacity 0s;
+    /*display: none;*/
     opacity: 0;
 }
 
 .prices-modal-content {
     position: absolute;
-    margin: 0 auto;
+    width: 400px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
+.prices-modal-content-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.prices-modal-cross {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    background: red;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
 .prices-modal-form {
-    width: 400px;
     background: #cccccc;
     border-radius: 10px;
 

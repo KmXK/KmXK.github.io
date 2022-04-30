@@ -424,16 +424,21 @@
 
         <div class="prices">
             <div class="container">
-                <div class="prices-modal">
+                <div class="prices-modal disabled">
                     <div class="prices-modal-content">
-                        <form class="prices-modal-form">
-                            <div class="prices-modal-form-container">
-                                <input name="name" placeholder="Name" id="name">
-                                <input name="email" placeholder="Email" id="email">
-                                <input name="tel" placeholder="Phone number" id="phoneNumber">
-                                <button type="submit" disabled>Send</button>
-                            </div>
-                        </form>
+                        <div class="prices-modal-content-inner">
+                            <button class="prices-modal-cross">
+                                <i class="fa fa-times" style="color: white"></i>
+                            </button>
+                            <form class="prices-modal-form">
+                                <div class="prices-modal-form-container">
+                                    <input name="name" placeholder="Name" id="name">
+                                    <input name="email" placeholder="Email" id="email">
+                                    <input name="tel" placeholder="Phone number" id="phoneNumber">
+                                    <button type="submit" disabled>Send</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
@@ -464,9 +469,7 @@
                             Free Tea and Free Mockup<br/>
                             Several prices
                         </p>
-                        <form>
-                            <button class="btn subscription-btn">Sign Up</button>
-                        </form>
+                        <button class="btn subscription-btn">Sign Up</button>
                     </div>
                     <div class="subscription">
                         <p class="subscription-logo">Advanced</p>
@@ -481,9 +484,7 @@
                             Free Tea and Free Mockup<br/>
                             Several prices
                         </p>
-                        <form>
-                            <button class="btn subscription-btn">Sign Up</button>
-                        </form>
+                        <button class="btn subscription-btn">Sign Up</button>
                     </div>
                     <div class="subscription">
                         <p class="subscription-logo">Pro</p>
@@ -498,9 +499,7 @@
                             Free Tea and Free Mockup<br/>
                             Several prices
                         </p>
-                        <form>
-                            <button class="btn subscription-btn">Sign Up</button>
-                        </form>
+                        <button class="btn subscription-btn">Sign Up</button>
                     </div>
                 </div>
             </div>
@@ -754,5 +753,7 @@
         </div>
     </footer>
 </div>
+
+<script src="index.js"></script>
 </body>
 </html>
