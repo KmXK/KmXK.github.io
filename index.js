@@ -1,6 +1,6 @@
-var all_button=document.getElementById('All_btn');
+let all_button = document.getElementById('All_btn');
 all_button.addEventListener('click',function(){
-    var parNode=document.getElementById("gallery_flex");
+    let parNode = document.getElementById("gallery_flex");
     while(parNode.firstChild){
         parNode.removeChild(parNode.firstChild);
     }
@@ -40,19 +40,19 @@ all_button.addEventListener('click',function(){
     img_7.src="content/Gallery/6.png";
     img_8.src="content/Gallery/8.png";
 
-    var images_1=block_row_1.childNodes;
+    let images_1 = block_row_1.childNodes;
     [].forEach.call(images_1,function(image){
         image.className="gallery_item";
     })
-    var images_2=block_row_2.childNodes;
+    let images_2 = block_row_2.childNodes;
     [].forEach.call(images_2,function(image){
         image.className="gallery_item";
     })
 })
 
-var web_button=document.getElementById('Web_btn');
+let web_button = document.getElementById('Web_btn');
 web_button.addEventListener('click',function(){
-    var parNode=document.getElementById("gallery_flex");
+    let parNode = document.getElementById("gallery_flex");
     while(parNode.firstChild){
         parNode.removeChild(parNode.firstChild);
     }
@@ -76,16 +76,16 @@ web_button.addEventListener('click',function(){
     img_3.src="content/Gallery/5.png";
     img_4.src="content/Gallery/7.png";
 
-    var images=block_row.childNodes;
+    let images = block_row.childNodes;
     [].forEach.call(images,function(image){
         image.className="gallery_item_web";
     })
 
 });
 
-var brouchers_button=document.getElementById('Brouchers_btn');
+let brouchers_button = document.getElementById('Brouchers_btn');
 brouchers_button.addEventListener('click',function(){
-    var parNode=document.getElementById("gallery_flex");
+    let parNode = document.getElementById("gallery_flex");
     while(parNode.firstChild){
         parNode.removeChild(parNode.firstChild);
     }
@@ -112,17 +112,17 @@ brouchers_button.addEventListener('click',function(){
     img_3.src="content/Gallery/2.png";
     img_4.src="content/Gallery/8.png";
 
-    var images_1=block_row_1.childNodes;
+    let images_1 = block_row_1.childNodes;
     [].forEach.call(images_1,function(image){
         image.className="gallery_item_brouchers_1";
     })
-    var images_2=block_row_2.childNodes;
+    let images_2 = block_row_2.childNodes;
     [].forEach.call(images_2,function(image){
         image.className="gallery_item_brouchers_2";
     })
 })
 
-var logos_button=document.getElementById('Logos_btn');
+let logos_button = document.getElementById('Logos_btn');
 logos_button.addEventListener('click',function(){
     var parNode=document.getElementById("gallery_flex");
     while(parNode.firstChild){
@@ -141,7 +141,7 @@ logos_button.addEventListener('click',function(){
     img_1.src="content/Gallery/4.png";
     img_2.src="content/Gallery/6.png";
 
-    var images=block_row.childNodes;
+    let images = block_row.childNodes;
     [].forEach.call(images,function(image){
         image.className="gallery_item_logos";
     })
