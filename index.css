@@ -1079,6 +1079,12 @@ body {
     margin-bottom: 0px;
 }
 
+.prices-alert {
+    font-family: "Crimson Text Roman", sans-serif;
+    font-size: 22px;
+    color: green;
+}
+
 /*Blog*/
 
 .blog {

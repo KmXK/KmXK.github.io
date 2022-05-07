@@ -65,16 +65,21 @@ function createPricesModal() {
     return content;
 }
 
-function showModalAlert(text, color) {
+function showModalAlert(text) {
     let content = createPricesModal();
 
     let p = document.createElement("p");
     p.textContent = text;
-    p.style.color = color;
+    p.classList.add("prices-alert");
     content.append(p);
 }
 
 function showPricesForm() {
+    if (getCookie("signedin") === "true") {
+        showModalAlert("You have been already signed in!");
+        return;
+    }
+
     let content = createPricesModal();
 
     let form = document.createElement("form");
@@ -128,13 +133,23 @@ function validateModal() {
 }
 
 function submitPricesModal() {
-    showModalAlert("You has been signed in successfully!", "green");
+    showModalAlert("You have been signed in successfully!");
+
+    // Добавление куки
+    document.cookie = "signedin=true";
 
     if(timeout) {
         clearTimeout(timeout);
     }
 
     timeout = setTimeout(closeModal, 5000);
+}
+
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 
 let signUpButtons = document.querySelectorAll('.subscription-btn');
