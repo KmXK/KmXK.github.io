@@ -837,6 +837,27 @@ body {
     width: 400px;
 }
 
+.block-row-brouchers-2{
+    width: 1600px;
+    display: flex;
+    align-items:flex-end;
+}
+.gallery_item_logos{
+    width: 800px;
+    height: 690px;
+}
+.gallery_item_brouchers_1{
+    width: 800px;
+    height: 250px;
+}
+.gallery_item_brouchers_2{
+    height: 440px;
+    width: 800px;
+}
+.gallery_item_web{
+    width: 400px;
+    height: 690px;
+}
 
 /* Prices */
 
