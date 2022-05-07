@@ -23,6 +23,7 @@
  */
 
 let modal = null;
+let timeout = null;
 
 function createPricesModal() {
     if(modal != null) {
@@ -127,7 +128,13 @@ function validateModal() {
 }
 
 function submitPricesModal() {
+    showModalAlert("You has been signed in successfully!", "green");
 
+    if(timeout) {
+        clearTimeout(timeout);
+    }
+
+    timeout = setTimeout(closeModal, 5000);
 }
 
 let signUpButtons = document.querySelectorAll('.subscription-btn');
