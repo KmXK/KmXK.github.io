@@ -1019,14 +1019,7 @@ body {
     transition: opacity .3s;
 }
 
-.prices-modal.disabled {
-    z-index: -100000;
-    transition: opacity 0s;
-    /*display: none;*/
-    opacity: 0;
-}
-
-.prices-modal-content {
+.prices-modal-container {
     position: absolute;
     width: 400px;
     left: 50%;
@@ -1034,7 +1027,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.prices-modal-content-inner {
+.prices-modal-container-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1053,7 +1046,7 @@ body {
     cursor: pointer;
 }
 
-.prices-modal-form {
+.prices-modal-content {
     background: #cccccc;
     border-radius: 10px;
 
@@ -1061,19 +1054,19 @@ body {
     padding-bottom: 20px;
 }
 
-.prices-modal-form-container {
+.prices-modal-form {
     width: 80%;
     margin: 20px auto;
 }
 
-.prices-modal-form-container > input {
+.prices-modal-form > input {
 }
 
-.prices-modal-form-container > button {
+.prices-modal-form > button {
 
 }
 
-.prices-modal-form-container * {
+.prices-modal-form * {
     box-sizing: border-box;
     display: block;
     width: 100%;
