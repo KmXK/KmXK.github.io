@@ -58,7 +58,7 @@ function showModalAlert(text, time) {
 
 function showPricesForm() {
     if (getCookie("signedin") === "true") {
-        showModalAlert("You have been already signed in!");
+        showModalAlert("You have been already signed in!", 5000);
         return;
     }
 

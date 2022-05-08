@@ -1076,13 +1076,14 @@ body {
     font-size: 24px;
 
     margin-top: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-.prices-alert {
+.modal-alert {
     font-family: "Crimson Text Roman", sans-serif;
     font-size: 22px;
     color: green;
+    text-align: center;
 }
 
 /*Blog*/
