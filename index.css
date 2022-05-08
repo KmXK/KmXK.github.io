@@ -817,7 +817,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .gallery {
     background-color: #3e3d3d;
 }
@@ -858,7 +857,14 @@ body {
     width: 400px;
     height: 690px;
 }
-
+.btn_portfolio_default{
+    color: black;
+    background-color: white;
+}
+.btn_portfolio_change{
+    color: white;
+    background-color: black;
+}
 /* Prices */
 
 .prices {
