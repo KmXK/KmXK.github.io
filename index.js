@@ -1,17 +1,19 @@
+const gallery = document.getElementById("gallery_flex");
+
 let all_button = document.getElementById('All_btn');
 all_button.addEventListener('click',function(){
-    let parNode = document.getElementById("gallery_flex");
-    while(parNode.firstChild){
-        parNode.removeChild(parNode.firstChild);
-    }
+
+    SetButtonColor(all_button);
+
+    RemoveImages(gallery);
 
     let block_row_1=document.createElement('div');
     block_row_1.className="block-row-1";
-    parNode.append(block_row_1);
+    gallery.append(block_row_1);
 
     let block_row_2=document.createElement('div');
     block_row_2.className="block-row-2";
-    parNode.append(block_row_2);
+    gallery.append(block_row_2);
 
     let img_1=document.createElement('img');
     let img_2=document.createElement('img');
@@ -52,10 +54,11 @@ all_button.addEventListener('click',function(){
 
 let web_button = document.getElementById('Web_btn');
 web_button.addEventListener('click',function(){
+
+    SetButtonColor(web_button);
+
     let parNode = document.getElementById("gallery_flex");
-    while(parNode.firstChild){
-        parNode.removeChild(parNode.firstChild);
-    }
+    RemoveImages(gallery);
 
     let block_row=document.createElement('div');
     block_row.className="block-row-1";
@@ -85,17 +88,17 @@ web_button.addEventListener('click',function(){
 
 let brouchers_button = document.getElementById('Brouchers_btn');
 brouchers_button.addEventListener('click',function(){
-    let parNode = document.getElementById("gallery_flex");
-    while(parNode.firstChild){
-        parNode.removeChild(parNode.firstChild);
-    }
+
+    SetButtonColor(brouchers_button);
+    RemoveImages(gallery);
+
     let block_row_1=document.createElement('div');
     block_row_1.className="block-row-1";
-    parNode.append(block_row_1);
+    gallery.append(block_row_1);
 
     let block_row_2=document.createElement('div');
     block_row_2.className="block-row-brouchers-2";
-    parNode.append(block_row_2);
+    gallery.append(block_row_2);
 
     let img_1=document.createElement('img');
     let img_2=document.createElement('img');
@@ -124,13 +127,13 @@ brouchers_button.addEventListener('click',function(){
 
 let logos_button = document.getElementById('Logos_btn');
 logos_button.addEventListener('click',function(){
-    var parNode=document.getElementById("gallery_flex");
-    while(parNode.firstChild){
-        parNode.removeChild(parNode.firstChild);
-    }
+
+    SetButtonColor(logos_button);
+    RemoveImages(gallery);
+
     let block_row=document.createElement('div');
     block_row.className="block-row-1";
-    parNode.append(block_row);
+    gallery.append(block_row);
 
     let img_1=document.createElement('img');
     let img_2=document.createElement('img');
@@ -146,3 +149,26 @@ logos_button.addEventListener('click',function(){
         image.className="gallery_item_logos";
     })
 })
+
+function RemoveImages(images)
+{
+    while(images.firstChild){
+        images.removeChild(images.firstChild);
+    }
+}
+
+function SetButtonColor(button)
+{
+    let buttons=document.querySelectorAll('.btn-portfolio');
+    let buttons_array=[];
+    for(let i=0;i<buttons.length;i++)
+    {
+        buttons_array[i]=buttons[i];
+    }
+    buttons_array.forEach(function (elem){
+        elem.style.backgroundColor="white";
+        elem.style.color="black";
+    })
+    button.style.backgroundColor="black";
+    button.style.color="white";
+}
