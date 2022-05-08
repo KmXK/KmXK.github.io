@@ -1,20 +1,4 @@
-let modal = document.getElementById("Modal");
-let btn = document.getElementById("btnSubmit");
-let span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-span.onclick = function() {
-    modal.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-modal = null;
+let modal = null;
 let timeout = null;
 
 function createPricesModal() {
@@ -22,14 +6,37 @@ function createPricesModal() {
         closeModal();
     }
 
-    let container = document.querySelector(".container > .contact-form-grid");
+    let container = document.querySelector(".prices > .container");
 
-    modal = document.getElementById("Modal");
+    modal = document.createElement("div");
+    modal.classList.add("prices-modal");
     modal.addEventListener("click", function (event) {
         if (event.target === modal)
             closeModal();
     });
     container.append(modal);
+
+    let modalContainer =  document.createElement("div");
+    modalContainer.classList.add("prices-modal-container");
+    modal.append(modalContainer);
+
+    let inner =  document.createElement("div");
+    inner.classList.add("prices-modal-container-inner");
+    modalContainer.append(inner);
+
+    let crossBtn =  document.createElement("button");
+    crossBtn.classList.add("prices-modal-cross");
+    crossBtn.addEventListener("click", closeModal);
+    inner.append(crossBtn);
+
+    let icon =  document.createElement("i");
+    icon.classList.add("fa", "fa-times");
+    icon.style.color = "white";
+    crossBtn.append(icon);
+
+    let content =  document.createElement("div");
+    content.classList.add("prices-modal-content");
+    inner.append(content);
 
     return content;
 }
@@ -43,30 +50,6 @@ function showModalAlert(text) {
     content.append(p);
 }
 
-function showPricesForm() {
-    let content = createPricesModal();
-
-    let form = document.getElementById("form");
-    form.classList.add("prices-modal-form");
-    content.append(form);
-
-    let nameInput = document.getElementById("Name");
-    nameInput.addEventListener("input", validateModal);
-
-    let emailInput = document.getElementById("Email");
-    emailInput.addEventListener("input", validateModal);
-
-    let telInput = document.getElementById("Tel");
-    telInput.pattern = "\\+375[0-9]{9}";
-    telInput.addEventListener("input", validateModal);
-
-    let sendBtn = document.getElementById("btnSubmit")
-    sendBtn.disabled = true;
-    sendBtn.addEventListener("click", submitPricesModal);
-
-    //form.append(nameInput, emailInput, telInput, sendBtn);
-}
-
 function closeModal() {
     modal?.remove();
 }
@@ -76,18 +59,14 @@ function validateModal() {
     let email = document.getElementById("Email").validity.valid;
     let telephone = document.getElementById("Tel").validity.valid;
 
-    document.getElementById("btnSubmit").disabled = !(name && email && telephone);
+    document.getElementById("submit").disabled = !(name && email && telephone);
 }
 
-function submitPricesModal() {
-    showModalAlert("Form send");
-
-    // Добавление куки
-    document.cookie = "signedin=true";
-
-    if(timeout) {
-        clearTimeout(timeout);
-    }
-
-    timeout = setTimeout(closeModal, 5000);
+function submButtonClick() {
+    showModalAlert('hui');
 }
+
+let buttonSubm = document.querySelector(".contact-submit");
+buttonSubm.addEventListener("click", submButtonClick);
+
+["Name", "Email", "Tel"].forEach(id => document.getElementById(id).addEventListener("input", validateModal));
