@@ -44,20 +44,28 @@
 
     <main class="main">
         <div class="home">
-            <div class="container">
-                <a href="#" class="home-nav-btn home-next-nav-btn"></a>
-                <a href="#" class="home-nav-btn home-prev-nav-btn"></a>
-
-                <div class="home-content">
-                    <p class="home-desc-text">Design Studio and Digital Agency</p>
-                    <img style="margin-bottom: 20px" src="content/Wave.png" alt="wave">
-                    <h1 class="home-title">We are Atlantida</h1>
-                    <img style="margin-bottom: 30px" src="content/Wave.png" alt="wave">
-
-                    <button class="btn home-start-btn">Get Started</button>
-
+            <div class="home-slider">
+                <div class="home-slider-line">
+                    <img src="content/home-image.jpg" alt="">
+                    <img src="content/home-image.jpg" alt="">
+                    <img src="content/home-image.jpg" alt="">
                 </div>
+            </div>
 
+            <div class="home-container">
+                <div class="container">
+                    <a href="#" class="home-nav-btn home-next-nav-btn"></a>
+                    <a href="#" class="home-nav-btn home-prev-nav-btn"></a>
+
+                    <div class="home-content">
+                        <p class="home-desc-text">Design Studio and Digital Agency</p>
+                        <img style="margin-bottom: 20px" src="content/Wave.png" alt="wave">
+                        <h1 class="home-title">We are Atlantida</h1>
+                        <img style="margin-bottom: 30px" src="content/Wave.png" alt="wave">
+
+                        <button class="btn home-start-btn">Get Started</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -396,23 +404,23 @@
                     duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus
                     bibendum dolor, sit amet pretium odio magna eget risus
                 </p>
-                <div class="portfolio-buttons">
-                    <button class="btn btn-portfolio">All</button>
-                    <button class="btn btn-portfolio">Website</button>
-                    <button class="btn btn-portfolio">Brouchers</button>
-                    <button class="btn btn-portfolio">Logos</button>
+                <div class="portfolio-buttons" id="portfolio_buttons">
+                    <button class="btn btn-portfolio btn-portfolio-change" id="All_btn">All</button>
+                    <button class="btn btn-portfolio" id="Web_btn">Website</button>
+                    <button class="btn btn-portfolio" id="Brouchers_btn">Brouchers</button>
+                    <button class="btn btn-portfolio" id="Logos_btn">Logos</button>
                 </div>
             </div>
 
             <div class="gallery">
-                <div class="gallery-flex">
-                    <div class="block-row-1">
+                <div class="gallery-flex" id="gallery_flex">
+                    <div class="block-row-1" id="block_row_1">
                         <img src="content/Gallery/1.png" class="gallery_item" alt="gallery_item"/>
                         <img src="content/Gallery/3.png" class="gallery_item" alt="gallery_item"/>
                         <img src="content/Gallery/5.png" class="gallery_item" alt="gallery_item"/>
                         <img src="content/Gallery/7.png" class="gallery_item" alt="gallery_item"/>
                     </div>
-                    <div class="block-row-2">
+                    <div class="block-row-2" id="block_row_2">
                         <img src="content/Gallery/2.png" class="gallery_item" alt="gallery_item"/>
                         <img src="content/Gallery/4.png" class="gallery_item" alt="gallery_item"/>
                         <img src="content/Gallery/6.png" class="gallery_item" alt="gallery_item"/>
@@ -451,9 +459,7 @@
                             Free Tea and Free Mockup<br/>
                             Several prices
                         </p>
-                        <form>
-                            <button class="btn subscription-btn">Sign Up</button>
-                        </form>
+                        <button class="btn subscription-btn">Sign Up</button>
                     </div>
                     <div class="subscription">
                         <p class="subscription-logo">Advanced</p>
@@ -468,9 +474,7 @@
                             Free Tea and Free Mockup<br/>
                             Several prices
                         </p>
-                        <form>
-                            <button class="btn subscription-btn">Sign Up</button>
-                        </form>
+                        <button class="btn subscription-btn">Sign Up</button>
                     </div>
                     <div class="subscription">
                         <p class="subscription-logo">Pro</p>
@@ -485,9 +489,7 @@
                             Free Tea and Free Mockup<br/>
                             Several prices
                         </p>
-                        <form>
-                            <button class="btn subscription-btn">Sign Up</button>
-                        </form>
+                        <button class="btn subscription-btn">Sign Up</button>
                     </div>
                 </div>
             </div>
@@ -651,31 +653,6 @@
                     <img class="clients-logo" src="content/logos/5.jpg" alt="">
                 </div>
             </div>
-
-            <div class="clients-quote">
-                <div class="clients-quote-image">
-                    <img src="content/dsss.png" alt="">
-                </div>
-                <div class="clients-quote-subtitle">
-                    <p class="clients-quote-subtitle-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu libero ut erat sodales
-                        finibus
-                        sed in dolor. Etiam iaculis, nibh a lobortis egestas, est urna sodales
-                    </p>
-                </div>
-                <div class="clients-quote-author">
-                    ALEXANDR PODVALNY
-                </div>
-                <div class="clients-quote-company">
-                    Free-PSD-Template.com Company
-                </div>
-
-                <div class="clients-quote-radio">
-                    <img src="content/Circles/left.png" alt="">
-                    <img src="content/Circles/mid.png" alt="">
-                    <img src="content/Circles/right.png" alt="">
-                </div>
-            </div>
         </div>
 
         <div class="map">
@@ -722,16 +699,21 @@
 
                 </div>
 
-                <form action="" class="contact-form">
+                <form id="form" class="contact-form">
                     <div class="contact-form-grid">
-                        <input placeholder="Name*" type="text" class="contact-form-field contact-name" required>
-                        <input placeholder="Email*" type="email" class="contact-form-field contact-email" required>
-                        <input placeholder="Telephone*" type="tel" class="contact-form-field contact-phone" required>
-                        <input placeholder="Website" type="text" class="contact-form-field contact-website">
-                        <textarea placeholder="Message" class="contact-form-field contact-message"></textarea>
+                        <input id="contact-name" placeholder="Name*" type="text" class="contact-form-field contact-name"
+                               required>
+                        <input id="contact-email" placeholder="Email*" type="email"
+                               class="contact-form-field contact-email" required>
+                        <input id="contact-phone" placeholder="Telephone*" type="tel"
+                               class="contact-form-field contact-phone" required>
+                        <input placeholder="Website" type="url" class="contact-form-field contact-website">
+                        <input placeholder="Message" type="text" class="contact-form-field contact-message">
                     </div>
-                    <button type="submit" class="contact-submit">Submit</button>
+
+                    <button id="contact-submit" type="button" class="contact-submit">Submit</button>
                 </form>
+
             </div>
 
             <div class="footer-line"></div>
@@ -742,4 +724,7 @@
     </footer>
 </div>
 </body>
+
+<script src="index.js"></script>
+
 </html>

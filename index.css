@@ -31,7 +31,6 @@ body {
     margin: 0 auto;
 }
 
-
 /* Shared */
 
 .container {
@@ -89,6 +88,56 @@ body {
     letter-spacing: 1px;
     margin: 0 auto 80px;
     color: #3e3d3d;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+
+    background: rgb(0, 0, 0, 0.6);
+
+    opacity: 100%;
+    margin: auto auto;
+    transition: opacity .3s;
+}
+
+.modal-container {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-container-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-cross {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    background: red;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+.modal-content {
+    background: #cccccc;
+    border-radius: 10px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* Header */
@@ -191,7 +240,36 @@ body {
 .home {
     width: 100%;
     height: 635px;
-    background: url("content/home-image.jpg") no-repeat center;
+    /*background: url("content/home-image.jpg") no-repeat center;*/
+
+    position: relative;
+}
+
+.home-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.home-slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-slider-line {
+    height: 100%;
+    width: 400%;
+    position: relative;
+    display: flex;
+    left: 0;
+    transition: all ease .3s;
+}
+
+.home-slider-line > img {
+    width: 25%;
+    height: 100%;
 }
 
 .home-nav-btn {
@@ -817,7 +895,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .gallery {
     background-color: #3e3d3d;
 }
@@ -837,7 +914,35 @@ body {
     width: 400px;
 }
 
-
+.block-row-brouchers-2{
+    width: 1600px;
+    display: flex;
+    align-items:flex-end;
+}
+.gallery_item_logos{
+    width: 800px;
+    height: 690px;
+}
+.gallery_item_brouchers_1{
+    width: 800px;
+    height: 250px;
+}
+.gallery_item_brouchers_2{
+    height: 440px;
+    width: 800px;
+}
+.gallery_item_web{
+    width: 400px;
+    height: 690px;
+}
+.btn-portfolio-default{
+    color: black;
+    background-color: white;
+}
+.btn-portfolio-change{
+    color: white;
+    background-color: black;
+}
 /* Prices */
 
 .prices {
@@ -1005,6 +1110,37 @@ body {
     color: #3e3d3d;
 }
 
+.prices-modal-form {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.prices-modal-form > input {
+}
+
+.prices-modal-form > button {
+
+}
+
+.prices-modal-form * {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 10px;
+
+    font-family: "Crimson Text Roman", sans-serif;
+    font-size: 24px;
+
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.modal-alert {
+    font-family: "Crimson Text Roman", sans-serif;
+    font-size: 22px;
+    color: green;
+    text-align: center;
+}
 
 /*Blog*/
 
@@ -1137,9 +1273,9 @@ body {
 }
 
 .clients-quote {
-    /*width: 1600px;*/
-    /*height: 524px;*/
     background: url("content/clients-background.jpg") no-repeat center;
+    background-size: auto;
+    transition: background 0.5s ease;
 }
 
 .clients-quote-image {
@@ -1207,6 +1343,40 @@ body {
 .clients-quote-radio {
     padding-bottom: 65px;
 }
+
+.cqb {
+    transition: background-color 0.5s ease;
+}
+
+.cqb-active {
+    background-color: black;
+    transition: background-color 0.5s ease;
+}
+
+.cqb-left {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    width: 12px;
+    height: 12px;
+    border-radius:50%;
+
+}
+.cqb-center {
+    border: none;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius:50%;
+}
+.cqb-right {
+    border: none;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius:50%;
+}
+
 
 
 /* Map */
@@ -1373,6 +1543,12 @@ body {
 .contact-submit:active {
     background: #fff;
     color: #464646;
+}
+
+.contact-submit:disabled {
+    background: #363636;
+    color: #bbbbbb;
+    pointer-events: none;
 }
 
 .footer-line {
