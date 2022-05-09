@@ -166,9 +166,9 @@ function SetButtonColor(button)
         buttons_array[i]=buttons[i];
     }
     buttons_array.forEach(function (elem){
-        elem.classList.remove('btn_portfolio_change');
-        elem.classList.add('btn_portfolio_default');
+        elem.classList.remove('btn-portfolio-change');
+        elem.classList.add('btn-portfolio-default');
     })
-    button.classList.remove('btn_portfolio_default');
-    button.classList.add('btn_portfolio_change');
+    button.classList.remove('btn-portfolio-default');
+    button.classList.add('btn-portfolio-change');
 }

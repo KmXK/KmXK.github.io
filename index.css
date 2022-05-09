@@ -857,11 +857,11 @@ body {
     width: 400px;
     height: 690px;
 }
-.btn_portfolio_default{
+.btn-portfolio-default{
     color: black;
     background-color: white;
 }
-.btn_portfolio_change{
+.btn-portfolio-change{
     color: white;
     background-color: black;
 }
