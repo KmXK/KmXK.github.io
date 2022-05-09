@@ -93,7 +93,8 @@ function showPricesForm() {
     telInput.pattern = "\\+375[0-9]{9}";
     telInput.addEventListener("input", validateModal);
 
-    let sendBtn = document.createElement("input")
+    let sendBtn = document.createElement("input")ж
+    sendBtn.value="Send";
     sendBtn.type = "submit";
     sendBtn.id = "prices-send";
     sendBtn.disabled = true;
