@@ -895,7 +895,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .gallery {
     background-color: #3e3d3d;
 }
@@ -915,7 +914,35 @@ body {
     width: 400px;
 }
 
-
+.block-row-brouchers-2{
+    width: 1600px;
+    display: flex;
+    align-items:flex-end;
+}
+.gallery_item_logos{
+    width: 800px;
+    height: 690px;
+}
+.gallery_item_brouchers_1{
+    width: 800px;
+    height: 250px;
+}
+.gallery_item_brouchers_2{
+    height: 440px;
+    width: 800px;
+}
+.gallery_item_web{
+    width: 400px;
+    height: 690px;
+}
+.btn-portfolio-default{
+    color: black;
+    background-color: white;
+}
+.btn-portfolio-change{
+    color: white;
+    background-color: black;
+}
 /* Prices */
 
 .prices {
