@@ -151,3 +151,25 @@ let signUpButtons = document.querySelectorAll('.subscription-btn');
 signUpButtons.forEach((value) => {
     value.addEventListener("click", showPricesForm);
 });
+
+
+
+// Home slider
+let homeSliderOffset = 0;
+const homeSliderLine = document.querySelector(".home-slider-line");
+const homeSlidesCount = homeSliderLine.querySelectorAll("img").length;
+function homeSliderMove(ratio) {
+    let offset = homeSliderOffset + ratio * 1600;
+
+    if(offset > 1600 * (homeSlidesCount - 1)) return;
+    else if(offset < 0) return;
+
+    homeSliderOffset = offset;
+    homeSliderLine.style.left = -homeSliderOffset + "px";
+}
+document.querySelector(".home-next-nav-btn").addEventListener("click", function() {
+    homeSliderMove(1);
+});
+document.querySelector(".home-prev-nav-btn").addEventListener("click", function() {
+    homeSliderMove(-1);
+});
