@@ -466,7 +466,7 @@ buttons.forEach(button => {
 function makeTimer() {
     clearInterval(timer) //Очистим интервал, это позволит прервать его работу и отменить перелистывание
     timer = setInterval(function () {
-        currentItem = (currentItem + 1) % clientsData.length;
+        currentItem = (currentItem + 1) % data.length;
         showQuote(currentItem);
     }, 2000);
 }
@@ -475,8 +475,8 @@ function makeTimer() {
 function showQuote(item) {
     currentItem = item;
     document.cookie = `currentItem=${currentItem}`;
-    author.textContent = clientsData[currentItem].author;
-    quote.style.background = `url(${clientsData[currentItem].image}) no-repeat center`;
+    author.textContent = data[currentItem].author;
+    quote.style.background = `url(${data[currentItem].image}) no-repeat center`;
 
     buttons.forEach(b => b.classList.remove('cqb-active'));
     buttons[currentItem].classList.add('cqb-active');
