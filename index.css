@@ -1137,9 +1137,9 @@ body {
 }
 
 .clients-quote {
-    /* width: 1600px;
-    height: 524px; */
     background: url("content/clients-background.jpg") no-repeat center;
+    background-size: auto;
+    transition: background 0.5s ease;
 }
 
 .clients-quote-image {
@@ -1208,11 +1208,16 @@ body {
     padding-bottom: 65px;
 }
 
-.active{
-    background-color: black;
+.cqb {
+    transition: background-color 0.5s ease;
 }
 
-.btn-left {
+.cqb-active {
+    background-color: black;
+    transition: background-color 0.5s ease;
+}
+
+.cqb-left {
     border: none;
     cursor: pointer;
     font-family: inherit;
@@ -1221,14 +1226,14 @@ body {
     border-radius:50%;
 
 }
-.btn-center {
+.cqb-center {
     border: none;
     cursor: pointer;
     width: 12px;
     height: 12px;
     border-radius:50%;
 }
-.btn-right {
+.cqb-right {
     border: none;
     cursor: pointer;
     width: 12px;

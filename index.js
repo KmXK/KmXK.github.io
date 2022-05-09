@@ -57,11 +57,11 @@ clients_quote.append(clients_quote_company);
 let clients_quote_radio = document.createElement('div');
 clients_quote_radio.className = "clients-quote-radio";
 let btn_left = document.createElement('button');
-btn_left.className = "btn-left cqb";
+btn_left.classList.add('cqb', 'cqb-left');
 let btn_center = document.createElement('button');
-btn_center.className = "btn-center cqb";
+btn_center.classList.add('cqb', 'cqb-center');
 let btn_right = document.createElement('button');
-btn_right.className = "btn-right cqb";
+btn_right.classList.add('cqb', 'cqb-right');
 clients_quote_radio.append(btn_left);
 clients_quote_radio.append(btn_center);
 clients_quote_radio.append(btn_right);
@@ -94,74 +94,41 @@ switch (getCookie("currentItem")) {
         break;
 }
 
-show(currentItem);
+showQuote(currentItem);
 
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
-        if (e.target.classList.contains('btn-left')) {
-            author.innerHTML = data[0].author;
-            quote.style.background = `url(${data[0].image}`
-            quote.style.backgroundRepeat = 'no-repeat'
-            quote.style.backgroundSize = '100% 100%'
-            buttons[0].classList.add('active');
-            buttons[1].classList.remove('active');
-            buttons[2].classList.remove('active');
-            makeTimer();
-            currentItem = 0
-            document.cookie = "currentItem=0"
+        if (e.target.classList.contains('cqb-left')) {
+            showQuote(0);
         }
-        if (e.target.classList.contains('btn-center')) {
-            author.innerHTML = data[1].author;
-            quote.style.background = `url(${data[1].image})`
-            quote.style.backgroundRepeat = 'no-repeat'
-            quote.style.backgroundSize = '100% 100%'
-            buttons[1].classList.add('active');
-            buttons[0].classList.remove('active');
-            buttons[2].classList.remove('active');
-            makeTimer();
-            currentItem = 1
-            document.cookie = "currentItem=1"
+        if (e.target.classList.contains('cqb-center')) {
+            showQuote(1);
         }
-        if (e.target.classList.contains('btn-right')) {
-            author.innerHTML = data[2].author;
-            quote.style.background = `url(${data[2].image})`
-            quote.style.backgroundRepeat = 'no-repeat'
-            quote.style.backgroundSize = '100% 100%'
-            buttons[0].classList.remove('active');
-            buttons[1].classList.remove('active');
-            buttons[2].classList.add('active');
-            makeTimer();
-            currentItem = 2
-            document.cookie = "currentItem=2"
+        if (e.target.classList.contains('cqb-right')) {
+            showQuote(2);
         }
     })
 })
 
-
-
-makeTimer(); //Создаем интервал 
 function makeTimer() {
     clearInterval(timer) //Очистим интервал, это позволит прервать его работу и отменить перелистывание
     timer = setInterval(function () {
-        currentItem++;
-        if (currentItem > data.length - 1)
-            currentItem = 0
-        show(currentItem);
+        currentItem = (currentItem + 1) % data.length;
+        showQuote(currentItem);
     }, 2000);
 }
 
 
-function show(currentItem) {
-    Document.cookie = `currentItem=${currentItem}`;
+function showQuote(item) {
+    currentItem = item;
+    document.cookie = `currentItem=${currentItem}`;
     author.textContent = data[currentItem].author;
     quote.style.background = `url(${data[currentItem].image}) no-repeat center`;
-    quote.style.backgroundRepeat = 'no-repeat'
-    quote.style.backgroundSize = '100% 100%'
-    buttons[currentItem].classList.toggle('active');
-    if (currentItem != 0)
-        buttons[currentItem - 1].classList.remove('active');
-    else
-        buttons[data.length - 1].classList.remove('active');
+
+    buttons.forEach(b => b.classList.remove('cqb-active'));
+    buttons[currentItem].classList.add('cqb-active');
+
+    makeTimer();
 }
 
 function getCookie(name) {
