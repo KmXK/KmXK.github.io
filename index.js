@@ -429,8 +429,6 @@ const company = document.querySelector('.clients-quote-company');
 const quote = document.querySelector('.clients-quote');
 const buttons = document.querySelectorAll('.cqb')
 
-document.getElementById("contact-phone").pattern = "\\+375[0-9]{9}";
-
 
 let currentItem = 0;
 let timer = 0;
