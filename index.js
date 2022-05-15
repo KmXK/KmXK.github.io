@@ -87,7 +87,7 @@ function showPricesForm() {
     let telInput = document.createElement("input");
     telInput.name = "tel";
     telInput.type = "tel";
-    telInput.placeholder = "Phone number";
+    telInput.placeholder = "Phone number (+375291234567)";
     telInput.required = true;
     telInput.id = "prices-phone";
     telInput.pattern = "\\+375[0-9]{9}";
