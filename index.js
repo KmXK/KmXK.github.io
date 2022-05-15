@@ -421,8 +421,6 @@ clients_quote_radio.append(btn_left);
 clients_quote_radio.append(btn_center);
 clients_quote_radio.append(btn_right);
 clients_quote.append(clients_quote_radio);
-
-console.log(clients_quote);
 //Конец создания слайдера
 
 
@@ -430,6 +428,8 @@ const author = document.querySelector('.clients-quote-author');
 const company = document.querySelector('.clients-quote-company');
 const quote = document.querySelector('.clients-quote');
 const buttons = document.querySelectorAll('.cqb')
+
+document.getElementById("contact-phone").pattern = "\\+375[0-9]{9}";
 
 
 let currentItem = 0;
